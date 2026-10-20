@@ -4,29 +4,25 @@
 
 **Multi-agent negotiation over A2A: schedule meetings, plan weekend team outings, and vote on bubble-tea orders.**
 
-dsh-meeting is a plugin for DeepSeek Harness (dsh). Everyone runs their own dsh assistant on their own computer. Assistants on the same LAN discover each other automatically and exchange A2A messages to negotiate times and tastes on behalf of their owners. When something needs the owner's own decision (say, giving up a lunch break), the assistant shows a card on the owner's phone page and waits for them to tap a choice.
-
-![Demo: in four scenarios, each person's assistant negotiates meetings over A2A](docs/images/demo.gif)
-
-> [!WARNING]
-> **There is no authentication. Use it only on a trusted LAN.** The plugin listens on ports 4500 (phone page / node) and 41500 (A2A) on your local network. Anyone on that network can open your phone page, send messages to your assistant and message you. The team code only keeps different teams apart; it is not a password. Do not use it on public Wi‑Fi or expose it to the internet.
-
-![Meeting negotiation: Manager Li's assistant agrees on a time with the assistants of Manager Liu and Manager Zhao over A2A](docs/images/meeting-full.png)
-
-> The UI and the demo company are in Chinese; the screenshots and the demo animation show the Chinese interface.
-
----
-
 ## The problem it solves
 
 Scheduling a three-person meeting usually goes like this: ask in the group chat who is free on Thursday, wait for everyone to check their calendars, find there's no overlap, privately ask someone whether they could move their lunch break, and finally someone books a room and sends invites. Weekend outings and group tea orders are worse: you need a common time, everyone's taste, and someone is lactose intolerant.
 
-dsh-meeting hands this back-and-forth to each person's own AI assistant:
+dsh-meeting is a DeepSeek Harness (dsh) plugin that hands this back-and-forth to each person's own AI assistant. Everyone runs their own dsh assistant on their own computer; assistants on the same LAN discover each other automatically and exchange A2A messages to negotiate times and tastes on behalf of their owners:
 
 - **Each assistant represents one person** and only reads and writes its owner's calendar, preferences and raw notes (chat logs, delivery history and so on) on that computer.
 - **Assistants negotiate directly**: requests, available slots, intersections, proposals and confirmations all travel as A2A messages. No central server.
 - **Privacy**: assistants only share "available / reluctant / needs owner's approval", never the reason. The other side learns you need to approve 12:00–13:30, not that it's your lunch break.
-- **The owner decides**: when a conflict needs someone to give way, the assistant never agrees on your behalf. It shows a card on your phone page and you tap yes or no.
+- **The owner decides**: when something needs the owner's own decision (say, giving up a lunch break), the assistant never agrees on your behalf. It shows a card on your phone page and you tap yes or no.
+
+![Demo: in four scenarios, each person's assistant negotiates meetings over A2A](docs/images/demo.gif)
+
+> The UI and the demo company are in Chinese; the screenshots and the demo animation show the Chinese interface.
+
+> [!WARNING]
+> **There is no authentication. Use it only on a trusted LAN.** The plugin listens on ports 4500 (phone page / node) and 41500 (A2A) on your local network. Anyone on that network can open your phone page, send messages to your assistant and message you. The team code only keeps different teams apart; it is not a password. Do not use it on public Wi‑Fi or expose it to the internet.
+
+---
 
 ## Installation
 
