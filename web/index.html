@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>九派 · 私人助理</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="phone"><div class="screen">
+    <div class="notch"></div>
+    <div class="sbar"><span class="clock"></span><span>●●● Wi‑Fi 🔋</span></div>
+    <div class="toast"></div>
+    <div class="hdr"><div class="av"></div><div><div class="nm"></div><div class="rl"></div></div><div class="st idle"></div></div>
+    <div class="tabs">
+      <div class="tab on" data-t="chat">💬 助理</div><div class="tab" data-t="msg">💭 消息<i class="badge" hidden></i></div><div class="tab" data-t="cal">📅 日程</div>
+      <div class="tab" data-t="mem">🧠 记住的</div><div class="tab" data-t="net">👥 同事</div>
+    </div>
+    <div class="body v-chat"></div>
+    <div class="body v-msg" hidden></div>
+    <div class="body v-cal" hidden></div>
+    <div class="body v-mem" hidden></div>
+    <div class="body v-net" hidden></div>
+    <div class="mention" hidden></div>
+    <div class="inp"><input placeholder="对你的助理说…（@某人 直接发给他）"><button>发送</button></div>
+    <div class="setup" hidden></div>
+  </div></div>
+  <aside class="side">
+    <section class="card"><h3>📡 A2A 报文 <small>本机收发</small><span class="sp"></span><button class="btn mini" data-act="reset">重来一轮</button></h3><div class="seq"></div><div class="detail"></div></section>
+    <section class="card"><h3>👥 局域网同事 <small class="mdns"></small></h3><div class="peers-side"></div></section>
+    <section class="card extra" hidden></section>
+  </aside>
+</main>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

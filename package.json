@@ -1,0 +1,67 @@
+{
+  "name": "@maximehu97/dsh-meeting",
+  "version": "0.3.0",
+  "description": "九派多智能体协商（排会 + 团建 / 奶茶投票）的 DeepSeek Harness 插件：每人一台电脑一个助理，局域网 mDNS 发现，A2A 互发，自带手机页。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "web",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "@amaster.ai/dsh-a2a": "0.1.30",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "bonjour-service": "^1.4.4"
+  },
+  "engines": {
+    "node": "^20.19 || ^22.12 || >=24.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximehu97/dsh-meeting.git"
+  },
+  "homepage": "https://github.com/maximehu97/dsh-meeting#readme",
+  "bugs": {
+    "url": "https://github.com/maximehu97/dsh-meeting/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "harness",
+    "a2a",
+    "multi-agent",
+    "meeting",
+    "lan"
+  ],
+  "author": "maximehu97",
+  "publishConfig": {
+    "access": "public"
+  }
+}
