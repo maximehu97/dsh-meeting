@@ -1,7 +1,7 @@
 {
   "name": "@maximehu97/dsh-meeting",
   "version": "0.3.0",
-  "description": "九派多智能体协商（排会 + 团建 / 奶茶投票）的 DeepSeek Harness 插件：每人一台电脑一个助理，局域网 mDNS 发现，A2A 互发，自带手机页。",
+  "description": "多智能体冲突协商（A2A 排会 + 周末团建 / 奶茶投票）的 DeepSeek Harness 插件：每人一台电脑一个助理，局域网 mDNS 发现，A2A 互发，自带手机页。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
